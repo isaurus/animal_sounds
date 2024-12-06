@@ -5,4 +5,10 @@
     <string name="itemDomestic">Domestic</string>
     <string name="itemWild">Wild</string>
     <string name="itemBirds">Birds</string>
+    <string name="name_pig">Pig</string>
+    <string name="name_rabbit">Rabbit</string>
+    <string name="name_chicken">Chicken</string>
+    <string name="name_fox">Fox</string>
+    <string name="name_cow">Cow</string>
+    <string name="name_horse">Horse</string>
 </resources>

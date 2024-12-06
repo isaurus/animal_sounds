@@ -6,4 +6,10 @@
     <string name="itemDomestic">Domésticos</string>
     <string name="itemWild">Salvajes</string>
     <string name="itemBirds">Aves</string>
+    <string name="name_pig">Cerdo</string>
+    <string name="name_rabbit">Conejo</string>
+    <string name="name_chicken">Pollo</string>
+    <string name="name_fox">Zorro</string>
+    <string name="name_cow">Vaca</string>
+    <string name="name_horse">Caballo</string>
 </resources>
