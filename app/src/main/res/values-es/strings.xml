@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sonidos de Animales</string>
+    <string name="itemType">Tipo</string>
+    <string name="itemLogout">Salir</string>
+    <string name="itemDomestic">Domésticos</string>
+    <string name="itemWild">Salvajes</string>
+    <string name="itemBirds">Aves</string>
+</resources>

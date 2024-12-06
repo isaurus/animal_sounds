@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Animal Sounds</string>
+    <string name="itemType">Type</string>
+    <string name="itemLogout">Logout</string>
+    <string name="itemDomestic">Domestic</string>
+    <string name="itemWild">Wild</string>
+    <string name="itemBirds">Birds</string>
+</resources>
