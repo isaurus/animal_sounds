@@ -11,4 +11,5 @@
     <string name="name_fox">Fox</string>
     <string name="name_cow">Cow</string>
     <string name="name_horse">Horse</string>
+    <string name="itemFarm">Farm</string>
 </resources>

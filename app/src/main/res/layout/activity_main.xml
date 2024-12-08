@@ -32,9 +32,9 @@
         app:srcCompat="@drawable/background_farm" />
 
     <ImageView
-        android:id="@+id/imgPig"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgOne"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,9 +42,9 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imgRabbit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgTwo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,39 +52,39 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imgChicken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgThree"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="@+id/imgPig"
-        app:layout_constraintTop_toBottomOf="@+id/imgPig"
+        app:layout_constraintStart_toStartOf="@+id/imgOne"
+        app:layout_constraintTop_toBottomOf="@+id/imgOne"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imgFox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgFour"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="@+id/imgRabbit"
-        app:layout_constraintTop_toBottomOf="@+id/imgRabbit"
+        app:layout_constraintEnd_toEndOf="@+id/imgTwo"
+        app:layout_constraintTop_toBottomOf="@+id/imgTwo"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imgCow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgFive"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="@+id/imgChicken"
-        app:layout_constraintTop_toBottomOf="@+id/imgChicken"
+        app:layout_constraintStart_toStartOf="@+id/imgThree"
+        app:layout_constraintTop_toBottomOf="@+id/imgThree"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imgHorse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgSix"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="@+id/imgFox"
-        app:layout_constraintTop_toBottomOf="@+id/imgFox"
+        app:layout_constraintEnd_toEndOf="@+id/imgFour"
+        app:layout_constraintTop_toBottomOf="@+id/imgFour"
         tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

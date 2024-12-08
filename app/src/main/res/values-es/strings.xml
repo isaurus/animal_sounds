@@ -12,4 +12,5 @@
     <string name="name_fox">Zorro</string>
     <string name="name_cow">Vaca</string>
     <string name="name_horse">Caballo</string>
+    <string name="itemFarm">Granja</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.example.animalsounds.view;
 
 import android.content.Context;
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,11 +12,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.animalsounds.R;
 import com.example.animalsounds.controller.ImageController;
+import com.example.animalsounds.controller.SoundController;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ImageController imgController;
+    private SoundController sndController;
+    private Context ctx;
+    private List<ImageView> animalPicsList;
+    private ImageView imgBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setSupportActionBar(findViewById(R.id.materialToolbar));
+
+        initComponents();
 
     }
 
@@ -34,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu, menu);
 
         return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
@@ -41,13 +50,22 @@ public class MainActivity extends AppCompatActivity {
         String selectedItem = String.valueOf(item.getTitle());
         switch (selectedItem){
             case "Domestic":
-                // TODO change background and animals pics to "Domestic"
+                // TODO
                 break;
             case "Wild":
-                // TODO change background and animals pics to "Wild"
+                imgController.setBackGroundImage(ctx, selectedItem, imgBackground);
+                imgController.glideCropAndSet(animalPicsList, selectedItem);
+                sndController.setBackgroundSound("Wild");
+                sndController.setAnimalSounds(animalPicsList, "Wild");
                 break;
             case "Birds":
-                // TODO change background and animals pics to "Birds"
+                // TODO
+                break;
+            case "Farm":
+                imgController.setBackGroundImage(ctx, selectedItem, imgBackground);
+                imgController.glideCropAndSet(animalPicsList,selectedItem);
+                sndController.setBackgroundSound("Farm");
+                sndController.setAnimalSounds(animalPicsList, "Farm");
                 break;
             case "Logout":
                 finish();
@@ -56,24 +74,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initComponents(){
-        List<ImageView> animalPicsList = new ArrayList<>();
-        animalPicsList.add(findViewById(R.id.imgPig));
-        animalPicsList.add(findViewById(R.id.imgRabbit));
-        animalPicsList.add(findViewById(R.id.imgChicken));
-        animalPicsList.add(findViewById(R.id.imgFox));
-        animalPicsList.add(findViewById(R.id.imgCow));
-        animalPicsList.add(findViewById(R.id.imgHorse));
 
-        List<SoundPool> animalSoundsList = new ArrayList<>();
-        animalSoundsList.add(R.raw.pig);
-        animalSoundsList.add(R.raw.rabbit);
-        animalSoundsList.add(R.raw.chicken);
-        animalSoundsList.add(R.raw.fox);
-        animalSoundsList.add(R.raw.cox);
-        animalSoundsList.add(R.raw.horse);
+        imgBackground = findViewById(R.id.imgBackground);
 
-        //Context ctx = getApplicationContext();
-        ImageController imgController = new ImageController();
-        imgController.bindListToXML(animalPicsList);
+        imgController = new ImageController();
+
+        animalPicsList = new ArrayList<>();
+
+        // Añadir los 6 ImageView a lista
+        animalPicsList.add(findViewById(R.id.imgOne));
+        animalPicsList.add(findViewById(R.id.imgTwo));
+        animalPicsList.add(findViewById(R.id.imgThree));
+        animalPicsList.add(findViewById(R.id.imgFour));
+        animalPicsList.add(findViewById(R.id.imgFive));
+        animalPicsList.add(findViewById(R.id.imgSix));
+
+        imgController.glideCropAndSet(animalPicsList, "Farm");
+
+        ctx = getApplicationContext();
+        sndController = new SoundController(ctx);
+
+        sndController.setBackgroundSound("Farm");
+        sndController.setAnimalSounds(animalPicsList, "Farm");
+
     }
 }
